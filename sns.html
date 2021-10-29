@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/sns.css" />
+
+    <title>OTOMO</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="main">
+        <!-- 
+            
+            snsコンテンツ新規追加フォームモーダル
+        
+        -->
+        <div class="modal">
+          <div class="inputbox-shadow"></div>
+          <div class="inputbox">
+            <p id="inputbox-image">Photo</p>
+            <input type="file" class="modal-snsimage-input" maxlength="50" />
+            <p class="inputbox-title">Comment</p>
+            <input type="text" class="modal-title-input" maxlength="50" />
+            <div class="modal-btn">
+              <div class="modal-closebtn">閉じる</div>
+              <div class="modal-savebtn-sns">保存</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ヘッダー -->
+        <div class="header">
+          <div class="header-left">
+            <p>OTOMO</p>
+          </div>
+          <div class="header-center">
+            <ul class="header-nav">
+              <li class="nav-list"><a href="main.html">Media</a></li>
+              <li class="nav-list"><a href="sns.html">SNS</a></li>
+              <li class="nav-list"><a href="/js/ar/index.html">AR</a></li>
+              <!-- <li class="nav-list">
+                <a href="https://kk2929.sakura.ne.jp/ar_test/index.html">AR</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+
+        <div class="fixed-item">
+          <div class="add-btn">＋</div>
+        </div>
+
+        <!-- 
+            
+            コンテンツ表示エリア
+        
+        -->
+        <div class="mainview">
+          <div class="mainbox">
+            <div class="innerbox">
+              <ul class="box-lists-sns">
+                <!-- 
+                    下記にコンテンツが挿入される
+                    デスクトップ画面で三列配置
+                 -->
+                <div class="cover"></div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+
+        jsライブラリ読み込み
+
+     -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- 
+
+        firebase読み込み
+
+     -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase.js"></script>
+    <!-- firebase設定関連のコードをここにまとめて記述 -->
+    <script src="js/firebase-setting.js"></script>
+
+    <!-- 
+
+        JSファイル読み込み
+
+     -->
+    <script src="js/actionListShowContents.js"></script>
+    <script src="js/actionListUseModal.js"></script>
+    <script src="js/actionListSaveContents.js"></script>
+    <script src="js/actionListDeleteContents.js"></script>
+  </body>
+</html>

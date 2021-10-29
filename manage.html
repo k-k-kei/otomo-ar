@@ -1,0 +1,129 @@
+<!-- 
+
+    Mediaへコンテンツを作成する際に使うページ。
+    現状リンクから飛ぶことができないため直接「manage.html」を叩く必要あり。
+
+-->
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/manage.css" />
+    <title>OTOMO</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="main">
+        <!-- 
+            
+            追加するコンテンツ情報を入力するモーダル
+        
+        -->
+        <div class="modal">
+          <div class="inputbox-shadow"></div>
+          <div class="inputbox">
+            <p class="inputbox-title">タイトル</p>
+            <input type="text" class="modal-title-input" maxlength="50" />
+            <p class="inputbox-category">カテゴリー</p>
+            <input type="text" class="modal-category-input" maxlength="50" />
+            <p class="inputbox-url">URL</p>
+            <input type="text" class="modal-url-input" maxlength="50" />
+            <p id="inputbox-image">画像</p>
+            <input type="file" class="modal-image-input" maxlength="50" />
+            <p class="inputbox-text">テキスト</p>
+            <textarea
+              name="modal-text-box"
+              class="modal-text-long"
+              cols="30"
+              rows="10"
+              maxlength="500"
+            ></textarea>
+            <div class="modal-btn">
+              <div class="modal-closebtn">閉じる</div>
+              <div class="modal-savebtn-media">保存</div>
+            </div>
+          </div>
+        </div>
+        <!-- ここまでモーダル -->
+
+        <!-- ヘッダー -->
+        <div class="header">
+          <div class="header-left">OTOMO dashboard</div>
+          <div class="header-center">
+            <ul class="header-nav">
+              <li class="nav-list"><a href="main.html">Media</a></li>
+              <li class="nav-list"><a href="sns.html">SNS</a></li>
+              <li class="nav-list"><a href="/js/ar/index.html">AR</a></li>
+              <!-- <li class="nav-list">
+                <a href="https://kk2929.sakura.ne.jp/ar_test/index.html">AR</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+
+        <!-- 
+            画面右下に＋ボタンを表示
+            クリックするとコンテンツ情報を追加するモーダルが開く
+         -->
+        <div class="fixed-item">
+          <div class="add-btn">＋</div>
+        </div>
+
+        <!-- 
+            
+            コンテンツ表示エリア
+        
+        -->
+        <div class="mainview">
+          <div class="mainbox">
+            <div class="innerbox">
+              <ul class="box-lists-manage">
+                <!-- 
+                    下記にコンテンツが挿入される
+                    デスクトップ画面で三列配置
+                    ※画像をクリックすると削除アラートが出る。
+                 -->
+                <div class="cover"></div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+
+        jsライブラリ読み込み
+
+     -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- 
+
+        firebase読み込み
+
+     -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase.js"></script>
+    <!-- firebase設定関連のコードをここにまとめて記述 -->
+    <script src="js/firebase-setting.js"></script>
+
+    <!-- 
+
+        JSファイル読み込み
+
+     -->
+    <script src="js/actionListShowContents.js"></script>
+    <script src="js/actionListUseModal.js"></script>
+    <script src="js/actionListSaveContents.js"></script>
+    <script src="js/actionListDeleteContents.js"></script>
+  </body>
+</html>

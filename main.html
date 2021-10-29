@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS読み込み -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- タイトル -->
+    <title>OTOMO</title>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="main">
+        <!-- 
+            詳細情報表示モーダル
+        -->
+        <div class="win">
+          <div class="win-box">
+            <div class="detail">
+              <div class="img-box">
+                <img src="" class="detail-img" alt="メディアの画像" />
+              </div>
+              <div class="text-box">
+                <div class="category">カテゴリー</div>
+                <p class="title">タイトル</p>
+                <p class="text">テキスト</p>
+                <a class="url" href="">url</a>
+              </div>
+            </div>
+            <div class="win-close">×</div>
+          </div>
+        </div>
+        <!-- 
+            モーダル ここまで
+        -->
+
+        <!-- ヘッダー -->
+        <div class="header">
+          <div class="header-left">
+            <p>OTOMO</p>
+          </div>
+          <div class="header-center">
+            <ul class="header-nav">
+              <li class="nav-list"><a href="main.html">Media</a></li>
+              <li class="nav-list"><a href="sns.html">SNS</a></li>
+              <!-- 下記をクリックするとカメラが起動する -->
+              <li class="nav-list"><a href="/js/ar/index.html">AR</a></li>
+              <!-- <li class="nav-list"><a href="https://kk2929.sakura.ne.jp/ar_test/index.html">AR</a></li> -->
+            </ul>
+          </div>
+        </div>
+
+        <div class="mainview">
+          <div class="mainbox">
+            <div class="innerbox">
+              <ul class="box-lists-media">
+                <!-- 
+                    下記にコンテンツが挿入される
+                    デスクトップ画面で三列配置
+                 -->
+                <div class="cover"></div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 
+
+        jsライブラリ読み込み
+
+     -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <!-- 
+
+        firebase読み込み
+
+     -->
+    <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase.js"></script>
+    <!-- firebase設定関連のコードをここにまとめて記述 -->
+    <script src="js/firebase-setting.js"></script>
+
+    <!-- 
+
+        JSファイル読み込み
+
+     -->
+    <script src="js/actionListShowContents.js"></script>
+    <script src="js/actionListUseModal.js"></script>
+    <script src="js/actionListSaveContents.js"></script>
+    <script src="js/actionListDeleteContents.js"></script>
+  </body>
+</html>

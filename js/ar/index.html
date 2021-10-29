@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+
+<body style="margin: 0px; overflow: hidden;">
+    <a-scene embedded arjs>
+        <!-- 値をセット -->
+        <a-assets>
+            <img id="pen" src="image/pen.png">
+            <img id="pic" src="image/pic.png">
+
+            <a-asset-item id="abo" src="image/abo.obj"></a-asset-item>
+            <a-asset-item id="abo-mat" src="image/abo-mat.mtl"></a-asset-item>
+
+            <a-asset-item id="fox" src="image/fox/fox.obj"></a-asset-item>
+            <a-asset-item id="fox-mat" src="image/fox/fox.mtl"></a-asset-item>
+
+            <a-asset-item id="pagu" src="image/pagu/pagu.obj"></a-asset-item>
+            <a-asset-item id="pagu-mat" src="image/pagu/pagu.mtl"></a-asset-item>
+
+            <a-asset-item id="coo" src="image/coo/coo.obj"></a-asset-item>
+            <a-asset-item id="coo-mat" src="image/coo/coo.mtl"></a-asset-item>
+
+            <a-asset-item id="cow" src="image/cow/cow.obj"></a-asset-item>
+            <a-asset-item id="cow-mat" src="image/cow/cow.mtl"></a-asset-item>
+
+            <a-asset-item id="dou" src="image/dou/dou.obj"></a-asset-item>
+            <a-asset-item id="dou-mat" src="image/dou/dou.mtl"></a-asset-item>
+
+            <a-asset-item id="r2" src="image/r2/r2.obj"></a-asset-item>
+            <a-asset-item id="r2-mat" src="image/r2/r2.mtl"></a-asset-item>
+
+            <a-asset-item id="robo" src="image/robo/robo.obj"></a-asset-item>
+            <a-asset-item id="robo-mat" src="image/robo/robo.mtl"></a-asset-item>
+
+            <a-asset-item id="speaker" src="image/speaker/speaker.obj"></a-asset-item>
+            <a-asset-item id="speaker-mat" src="image/speaker/speaker.mtl"></a-asset-item>
+
+        </a-assets>
+
+        <!-- マーカーに対しての.pattをそれぞれ指定 -->
+        <a-marker type="pattern" url="maru.patt">
+            <a-image src="image/pen.png" width="1" height="1"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="pic.patt">
+            <a-image src="image/pic.png" width="2" height="2"></a-image>
+        </a-marker>
+
+        <a-marker type="pattern" url="abo.patt">
+            <a-obj-model src="#abo" mtl="#abo-mat" width="3" height="3"></a-obj-model>
+        </a-marker>
+
+        <a-marker type="pattern" url="fox.patt">
+            <a-obj-model src="#fox" mtl="#fox-mat" width="3" height="3"></a-obj-model>
+        </a-marker>
+
+        <a-marker type="pattern" url="pagu.patt">
+            <a-obj-model src="#pagu" mtl="#pagu-mat" width="3" height="3"></a-obj-model>
+        </a-marker>
+
+        <a-marker type="pattern" url="coo.patt">
+            <a-obj-model src="#coo" mtl="#coo-mat" width="3" height="3"></a-obj-model>
+        </a-marker>
+
+        <a-marker type="pattern" url="cow.patt">
+            <a-obj-model src="#cow" mtl="#cow-mat" width="3" height="3"></a-obj-model>
+        </a-marker>
+
+        <a-marker type="pattern" url="dou.patt">
+            <a-obj-model src="#dou" mtl="#dou-mat" width="3" height="3"></a-obj-model>
+        </a-marker>
+
+        <a-marker type="pattern" url="r2.patt">
+            <a-obj-model src="#r2" mtl="#r2-mat" width="3" height="3"></a-obj-model>
+        </a-marker>
+
+        <a-marker type="pattern" url="robo.patt">
+            <a-obj-model src="#robo" mtl="#robo-mat" width="3" height="3"></a-obj-model>
+        </a-marker>
+
+        <a-marker type="pattern" url="speaker.patt">
+            <a-obj-model src="#speaker" mtl="#speaker-mat" width="3" height="3"></a-obj-model>
+        </a-marker>
+
+
+        <a-entity camera></a-entity>
+    </a-scene>
+</body>
+
+</html>
